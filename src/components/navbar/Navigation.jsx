@@ -3,13 +3,6 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
 import NavigationLink from "./NavigationLink";
-import {
-  ChartBarIcon,
-  ChartPieIcon,
-  DocumentCheckIcon,
-  Square2StackIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
 
 const containerVariants = {
   close: {
@@ -58,7 +51,7 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         onClick={() => handleOpenClose()}
         className="flex flex-col justify-center items-center"
@@ -114,22 +107,22 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col gap-3 text-end">
-            <NavigationLink name="Home" path={"/"}>
-              <ChartBarIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-            <NavigationLink name="Our service">
-              <Square2StackIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-            <NavigationLink name="Our members">
-              <DocumentCheckIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-            <NavigationLink name="Industry sectors">
-              <ChartPieIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-            <NavigationLink name="About us">
-              <UsersIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
+          <div className="flex flex-col gap-3 items-end text-justify">
+            <NavigationLink name="Home" path={"/"} />
+
+            <NavigationLink name="Our Service" path={"/"} />
+
+            <NavigationLink name="Our Members" path={"/"} />
+
+            <NavigationLink name="Industry Sectors" path={"/"} />
+
+            <NavigationLink name="Education Center" path={"/"} />
+
+            <NavigationLink name="Media Center" path={"/"} />
+
+            <NavigationLink name="Careers" path={"/"} />
+
+            <NavigationLink name="Contact Us" path={"/"} />
           </div>
         </motion.div>
       )}
