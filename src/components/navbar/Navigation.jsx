@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useAnimationControls, AnimatePresence } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
-import NavigationLink from "./LInkNavigation";
+import NavigationLink from "./NavigationLink";
 import {
   ChartBarIcon,
   ChartPieIcon,
@@ -41,8 +41,6 @@ const svgVariants = {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-
   const containerControls = useAnimationControls();
   const svgControls = useAnimationControls();
 
@@ -58,7 +56,6 @@ const Navigation = () => {
 
   const handleOpenClose = () => {
     setIsOpen(!isOpen);
-    setSelectedProject(null);
   };
   return (
     <div className="relative">
@@ -134,29 +131,6 @@ const Navigation = () => {
               <UsersIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
             </NavigationLink>
           </div>
-          {/* <div className="flex flex-col gap-3">
-            <ProjectLink
-              name="Virtual Reality"
-              setSelectedProject={setSelectedProject}
-            >
-              <div className="min-w-4 mx-2 border-pink-600 border rounded-full aspect-square bg-pink-700" />
-            </ProjectLink>
-            <ProjectLink
-              name="Apple Vision Pro"
-              setSelectedProject={setSelectedProject}
-            >
-              <div className="min-w-4 mx-2 border-indigo-600 border rounded-full aspect-square bg-indigo-700" />
-            </ProjectLink>
-            <ProjectLink name="Porsche" setSelectedProject={setSelectedProject}>
-              <div className="min-w-4 mx-2 border-cyan-600 border rounded-full aspect-square bg-cyan-700" />
-            </ProjectLink>
-            <ProjectLink
-              name="Secret Project"
-              setSelectedProject={setSelectedProject}
-            >
-              <div className="min-w-4 mx-2 border-yellow-600 border rounded-full aspect-square bg-yellow-700" />
-            </ProjectLink>
-          </div> */}
         </motion.div>
       )}
     </div>
