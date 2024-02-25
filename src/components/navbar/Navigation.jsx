@@ -54,7 +54,7 @@ const Navigation = () => {
     <div className="relative ">
       <button
         onClick={() => handleOpenClose()}
-        className="flex flex-col justify-center items-center"
+        className="flex flex-col justify-center items-center p-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
