@@ -105,31 +105,22 @@ const Navbar = () => {
           </div>
 
           <div className="flex gap-5 items-center text-xs">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
+            <motion.div
+              whileHover={{ scale: 1.06 }}
               animate="visible"
               initial="hidden"
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -100,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              href={"/"}
-              className="hidden lg:block hover:text-[#74bf43] transition-all duration-300 uppercase"
+              className="hidden lg:block hover:text-[#74bf43]  uppercase w-fit"
             >
-              Contact Us
-            </motion.a>
-            <Link
-              href={"/"}
-              className="hidden lg:block hover:text-[#74bf43] transition-all duration-300 uppercase"
+              <Link href={"#"}> Contact Us</Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.06 }}
+              animate="visible"
+              initial="hidden"
+              className="hidden lg:block hover:text-[#74bf43]  uppercase w-fit"
             >
-              Portal Sign In
-            </Link>
+              <Link href={"#"}> Portal Sign In</Link>
+            </motion.div>
           </div>
           <Link
             href={"/"}
