@@ -12,7 +12,7 @@ const About = () => {
   return (
     <main className="max-w-screen-xl m-auto px-2 mt-14 lg:mt-20">
       <div className=" xl:flex ">
-        <aside className="xl:h-[900px] xl:bg-[#003875] xl:text-white xl:p-20 bg-gray-100">
+        <aside className="p-3 md:p-0 xl:h-[900px] xl:bg-[#003875] xl:text-white xl:p-20 bg-gray-100">
           <AboutText />
         </aside>
         <main className="xl:h-[900px] bg-gray-100 p-3 xl:p-20">

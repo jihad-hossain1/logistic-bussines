@@ -1,5 +1,6 @@
 import About from "@/src/components/About/About";
 import HomeSlider from "@/src/components/Slider/HomeSlider";
+import ServiceSlider from "@/src/components/Slider/ServiceSlider";
 import Features from "@/src/components/feature/Features";
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
       <HomeSlider />
       <Features />
       <About />
+      <ServiceSlider />
     </>
   );
 };
