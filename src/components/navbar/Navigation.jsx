@@ -19,33 +19,22 @@ const containerVariants = {
       type: "spring",
       damping: 15,
       duration: 0.5,
+      ease: [0.17, 0.67, 0.83, 0.67],
     },
-  },
-};
-
-const svgVariants = {
-  close: {
-    rotate: 360,
-  },
-  open: {
-    rotate: 180,
   },
 };
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerControls = useAnimationControls();
-  const svgControls = useAnimationControls();
 
   useEffect(() => {
     if (isOpen) {
       containerControls.start("open");
-      svgControls.start("open");
     } else {
       containerControls.start("close");
-      svgControls.start("close");
     }
-  }, [isOpen, svgControls, containerControls]);
+  }, [isOpen, containerControls]);
 
   const handleOpenClose = () => {
     setIsOpen(!isOpen);
@@ -76,7 +65,7 @@ const Navigation = () => {
         <motion.div
           variants={containerVariants}
           animate={containerControls}
-          //   onClick={() => handleOpenClose()}
+          // onClick={() => handleOpenClose()}
           initial="close"
           className=" bg-[#003875] flex flex-col z-10 gap-20 p-5 absolute top-0  right-0 h-screen shadow shadow-neutral-600"
         >
@@ -90,8 +79,6 @@ const Navigation = () => {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="w-8 h-8"
-                variants={svgVariants}
-                animate={svgControls}
                 transition={{
                   duration: 0.5,
                   ease: "easeInOut",
@@ -107,7 +94,12 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col gap-3 items-end text-justify">
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 25 }}
+            transition={{ delay: 0.35 }}
+            className="flex flex-col gap-3 items-end text-justify"
+          >
             <NavigationLink name="Home" path={"/"} />
 
             <NavigationLink name="Our Service" path={"/"} />
@@ -123,7 +115,7 @@ const Navigation = () => {
             <NavigationLink name="Careers" path={"/"} />
 
             <NavigationLink name="Contact Us" path={"/"} />
-          </div>
+          </motion.div>
         </motion.div>
       )}
     </div>
