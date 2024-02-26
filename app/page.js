@@ -1,15 +1,11 @@
 import HomeSlider from "@/src/components/Slider/HomeSlider";
-import Test1 from "@/src/components/test/Test1";
-import React from "react";
+import Features from "@/src/components/feature/Features";
 
 const HomePage = () => {
   return (
     <>
       <HomeSlider />
-
-      <h4>HomePage</h4>
-
-      <Test1 />
+      <Features />
     </>
   );
 };
