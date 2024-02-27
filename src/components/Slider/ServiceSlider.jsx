@@ -58,8 +58,7 @@ const ServiceSlider = () => {
               <Image
                 width={400}
                 height={300}
-                className=" rounded-sm  w-full "
-                // className="group-hover:scale-105 group-hover:transform-gpu group-hover:ease-in-out transition-all duration-500 rounded-sm  w-full "
+                className=" rounded-sm w-[370px] md:w-[450px]"
                 src={slider1.src}
                 alt="slider iamge"
               />
@@ -74,7 +73,7 @@ const ServiceSlider = () => {
             <Image
               width={400}
               height={300}
-              className="rounded-sm  w-full "
+              className="rounded-sm  w-[370px] md:w-[450px] "
               src={slider2.src}
               alt="slider img"
             />
@@ -88,7 +87,7 @@ const ServiceSlider = () => {
             <Image
               width={400}
               height={300}
-              className="rounded-sm h-full  w-full"
+              className="rounded-sm w-[370px] md:w-[450px]"
               src={slider3.src}
               alt="slider image"
             />
