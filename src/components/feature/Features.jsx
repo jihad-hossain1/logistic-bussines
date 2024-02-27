@@ -1,7 +1,6 @@
 import React from "react";
 import { featureDta } from "./featureData";
 import Image from "next/image";
-import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 
 const Features = () => {
@@ -14,7 +13,7 @@ const Features = () => {
         >
           Features
         </h4>
-        <h4 className="flex flex-col gap-2 text-xl sm:text-2xl md:text-4xl xl:text-6xl font-semibold text-center">
+        <h4 className="flex flex-col gap-2 text-xl sm:text-2xl md:text-4xl xl:text-6xl font-semibold text-center text-[#003875]">
           <span>Special Features Thats Make You</span>
           <span>Happy And Cheer Up!</span>
         </h4>

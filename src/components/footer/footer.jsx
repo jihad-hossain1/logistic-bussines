@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <main className="bg-[#003875] text-zinc-50 mt-16">
+    <main className="bg-[#003875] text-zinc-50 ">
       <div className="max-w-screen-xl m-auto px-2 uppercase  py-7 lg:py-14">
         <div className="grid gap-7 md:flex md:gap-7 lg:gap-16 ">
           <aside className="flex flex-col gap-3 lg:gap-6 text-xs text-gray-300 items-center">

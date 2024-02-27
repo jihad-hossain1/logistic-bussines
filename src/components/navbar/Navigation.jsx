@@ -2,7 +2,7 @@
 
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
-import NavigationLink from "./NavigationLink";
+import { navData } from "./navData";
 
 const containerVariants = {
   close: {
@@ -11,6 +11,7 @@ const containerVariants = {
       type: "spring",
       damping: 15,
       duration: 0.5,
+      ease: [1, 0.67, 0.83, 1],
     },
   },
   open: {
@@ -18,7 +19,7 @@ const containerVariants = {
     transition: {
       type: "spring",
       damping: 15,
-      duration: 0.5,
+      duration: 1,
       ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
@@ -97,24 +98,34 @@ const Navigation = () => {
           <motion.div
             animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 25 }}
-            transition={{ delay: 0.35 }}
-            className="flex flex-col gap-3 items-end text-justify"
+            transition={{
+              delay: 0.35,
+            }}
+            className="flex flex-col gap-5 lg:gap-8 items-end text-justify"
           >
-            <NavigationLink name="Home" path={"/"} />
-
-            <NavigationLink name="Our Service" path={"/"} />
-
-            <NavigationLink name="Our Members" path={"/"} />
-
-            <NavigationLink name="Industry Sectors" path={"/"} />
-
-            <NavigationLink name="Education Center" path={"/"} />
-
-            <NavigationLink name="Media Center" path={"/"} />
-
-            <NavigationLink name="Careers" path={"/"} />
-
-            <NavigationLink name="Contact Us" path={"/"} />
+            {navData?.map((nav, index) => (
+              <motion.a
+                key={index}
+                href={"#"}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{
+                  scale: 1.1,
+                  // backgroundColor: "white",
+                  // color: "orange",
+                  borderBottom: "solid 1px gray ",
+                  transition: {
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  },
+                }}
+                transition={{
+                  bounceDamping: 10,
+                  bounceStiffness: 600,
+                }}
+              >
+                {nav?.name}
+              </motion.a>
+            ))}
           </motion.div>
         </motion.div>
       )}

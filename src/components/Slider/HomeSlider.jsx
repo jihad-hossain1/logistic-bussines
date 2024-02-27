@@ -1,36 +1,19 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { A11y, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-
-// import required modules
-import { Navigation } from "swiper/modules";
-import { Autoplay } from "swiper/modules";
 import image1 from "@/public/image1.jpg";
 import image2 from "@/public/image2.jpg";
 import image3 from "@/public/image3.jpg";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 
 const HomeSlider = () => {
   return (
     <>
-      <Swiper
-        watchSlidesProgress={true}
-        // slidesPerView={slides}
-        className="mySwiper "
-        // spaceBetween={30}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-
-        // }}
-        // modules={[Autoplay, Navigation]}
-      >
+      <Swiper watchSlidesProgress={true} className="mySwiper ">
         <SwiperSlide>
           <SliderOne />
         </SwiperSlide>
@@ -87,6 +70,7 @@ function SliderOne() {
     </div>
   );
 }
+
 function SliderTwo() {
   const comp = useRef(null);
 
@@ -129,6 +113,7 @@ function SliderTwo() {
     </div>
   );
 }
+
 function SliderThree() {
   const comp2 = useRef(null);
 

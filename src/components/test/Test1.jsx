@@ -59,7 +59,7 @@ const Test1 = () => {
       <div className="hidden">
         <SvgAnimation />
       </div>
-      <div className="">
+      <div className="hidden">
         <ScrollAnimation />
       </div>
     </>
