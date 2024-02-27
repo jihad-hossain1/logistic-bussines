@@ -26,7 +26,7 @@ const Footer = () => {
                 <ul className="flex flex-col gap-3 pt-5 text-xs text-gray-300">
                   {item?.links?.map((itm, _ind) => (
                     <li
-                      className="cursor-pointer hover:text-gray-50 transition-all duration-200"
+                      className="cursor-pointer hover:text-gray-50 transition-all duration-200 w-fit"
                       key={_ind}
                     >
                       {itm?.link}
