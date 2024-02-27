@@ -40,7 +40,7 @@ const ServiceSlider = () => {
   }, []);
 
   return (
-    <div className="mt-12 max-w-screen-xl mx-auto relative">
+    <div className="mt-12 max-w-screen-xl mx-auto relative px-2">
       <Swiper
         watchSlidesProgress={true}
         slidesPerView={slides}
@@ -54,11 +54,11 @@ const ServiceSlider = () => {
       >
         <SwiperSlide>
           <div className="group cursor-pointer">
-            <div className="">
+            <div className="overflow-hidden">
               <Image
                 width={400}
                 height={300}
-                className=" rounded-sm w-[370px] md:w-[450px]"
+                className=" rounded-sm w-[370px] md:w-[450px] group-hover:scale-105 transition-all duration-500"
                 src={slider1.src}
                 alt="slider iamge"
               />
@@ -69,28 +69,32 @@ const ServiceSlider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group">
-            <Image
-              width={400}
-              height={300}
-              className="rounded-sm  w-[370px] md:w-[450px] "
-              src={slider2.src}
-              alt="slider img"
-            />
+          <div className="group cursor-pointer">
+            <div className="overflow-hidden">
+              <Image
+                width={400}
+                height={300}
+                className="rounded-sm  w-[370px] md:w-[450px] group-hover:scale-105 transition-all duration-500"
+                src={slider2.src}
+                alt="slider img"
+              />
+            </div>
             <button className="p-4 bg-slate-200/90 w-full group-hover:bg-[#78b926] transition-all duration-500 uppercase font-[400] text-sm">
-              Be a member of Logistics{" "}
+              Be a member of Logistics
             </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group">
-            <Image
-              width={400}
-              height={300}
-              className="rounded-sm w-[370px] md:w-[450px]"
-              src={slider3.src}
-              alt="slider image"
-            />
+          <div className="group cursor-pointer">
+            <div className="overflow-hidden">
+              <Image
+                width={400}
+                height={300}
+                className="rounded-sm w-[370px] md:w-[450px] group-hover:scale-105 transition-all duration-500"
+                src={slider3.src}
+                alt="slider image"
+              />
+            </div>
             <button className="p-4 bg-slate-200/90 w-full group-hover:bg-[#78b926] transition-all duration-500 uppercase font-[400] text-sm">
               Education Centre
             </button>
