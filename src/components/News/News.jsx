@@ -91,7 +91,7 @@ function SliderButton() {
       <div className="absolute z-50 top-[45%] left-3">
         <div className="swiper-nav-btns  mt-4 ">
           <button
-            className=" rounded bg-slate-50 p-3 hover:bg-slate-100 transition-all duration-500"
+            className=" rounded bg-slate-50/50 p-3 hover:bg-slate-100 transition-all duration-500"
             onClick={() => swiper.slidePrev()}
           >
             <MdOutlineKeyboardArrowLeft />
