@@ -3,7 +3,7 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navData } from "./navData";
-
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa6";
 const containerVariants = {
   close: {
     width: "5rem",
@@ -110,8 +110,6 @@ const Navigation = () => {
                 whileTap={{ scale: 0.9 }}
                 whileHover={{
                   scale: 1.1,
-                  // backgroundColor: "white",
-                  // color: "orange",
                   borderBottom: "solid 1px gray ",
                   transition: {
                     duration: 0.5,
@@ -127,10 +125,24 @@ const Navigation = () => {
               </motion.a>
             ))}
           </motion.div>
+          <Contact />
         </motion.div>
       )}
     </div>
   );
 };
 
+function Contact() {
+  return (
+    <aside className="md:hidden flex flex-col gap-5 ml-10 text-xs text-gray-300 items-center absolute bottom-20 ">
+      <h4>+880 1779 334696</h4>
+      <h4>Info@logistics.com</h4>
+      <div className="flex gap-6 text-[23px] text-gray-400">
+        <FaYoutube className="cursor-pointer hover:text-gray-50 transition-all duration-200" />
+        <FaFacebook className="cursor-pointer hover:text-gray-50 transition-all duration-200" />
+        <FaTwitter className="cursor-pointer hover:text-gray-50 transition-all duration-200" />
+      </div>
+    </aside>
+  );
+}
 export default Navigation;
